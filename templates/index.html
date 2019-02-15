@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+	
+
+<h1>Upload your picture!</h1>
+<p>Let's see your pup's breed!</p>
+<form method='post' enctype='multipart/form-data'>
+	<input type='file' name='dog_name'>
+	<input type='submit' value='Upload'>
+</form>
+{% for i in result %}
+	<div> {{i}} </div>
+{% endfor %}
+</body>
+</html>
