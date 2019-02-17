@@ -4,6 +4,7 @@ import keras
 import numpy as np
 from keras.preprocessing import image
 from keras.applications.vgg19 import (VGG19, preprocess_input, decode_predictions)
+import pickle
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
@@ -13,6 +14,8 @@ def predict(image_path):
     
     image_size = (224, 224)
     """Use VGG19 to label image"""
+
+    print(dir(image))
     img = image.load_img(image_path, target_size=image_size)
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
